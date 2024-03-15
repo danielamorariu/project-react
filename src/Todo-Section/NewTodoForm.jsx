@@ -6,7 +6,7 @@ export function NewTodoForm({ onSubmit }) {
         e.preventDefault()
 
         if (newItem === "") return
-        onSubmit( )
+        onSubmit(newItem)
 
         setNewItem("")
     }
@@ -19,7 +19,8 @@ export function NewTodoForm({ onSubmit }) {
                     value={newItem}
                     onChange={e => setNewItem(e.target.value)}
                     type="text"
-                    id="item" />
+                    id="item"
+                />
             </div>
             <button className="btn">Add</button>
         </form>
